@@ -1,0 +1,10 @@
+# Watcher configuration
+# https://www.npmjs.com/package/chokidar
+
+globs:
+  include:
+    - '${projectPath}/**'
+  ignore:
+    - '**/node_modules/**'
+    - '${projectPath}/.build/**'
+    - '**/event.input.json'
