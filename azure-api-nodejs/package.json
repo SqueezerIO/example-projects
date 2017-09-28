@@ -5,9 +5,9 @@
   },
   "dependencies": {
     "azure-storage": "^2.4.0",
-    "squeezer-azure": "~0.0.1",
-    "squeezer-serve": "~0.0.1",
-    "squeezer-swagger": "~0.0.2"
+    "squeezer-azure": "~0.0.2",
+    "squeezer-serve": "~0.0.2",
+    "squeezer-swagger": "~0.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
