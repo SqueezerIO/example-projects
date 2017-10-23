@@ -1,0 +1,4 @@
+- description: Installing yarn
+  bin: cd ${project.path} && npm install yarn --silent
+- description: Installing project's npm packages
+  bin: cd ${project.path} && npm install --silent

@@ -1,0 +1,9 @@
+# SQUEEZER MICROSERVICE
+
+name: hello
+description: Hello !!!!!
+
+events:
+  - type: http
+    path: /rest/v1/hello
+    method: get

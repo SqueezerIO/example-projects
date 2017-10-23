@@ -1,0 +1,37 @@
+info:
+  title: API Documentation
+  description: Detailed documentation for available API endpoints
+definitions:
+  GetResponseV1:
+    type: object
+    properties:
+      message:
+        type: string
+        default: success
+      statusCode:
+        type: integer
+        default: 200
+  ErrorResponseV1:
+    type: object
+    properties:
+      errors:
+        type: object
+      message:
+        type: string
+        default: error message
+  ProductV1:
+    type: object
+    required:
+      - title
+      - category
+      - price
+      - stock
+    properties:
+      title:
+        type: string
+      category:
+        type: string
+      price:
+        type: integer
+      stock:
+        type: integer        

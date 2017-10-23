@@ -1,0 +1,2 @@
+- description: Webpacking handler source
+  bin: sqz fileutils:link --source ${source} --target ${output}

@@ -1,0 +1,14 @@
+description: Hello Function
+
+events:
+  - type: http
+    path: /home/heelo
+    method: get
+    x-azure-settings:
+      name: req #<string>, default - "req", specifies which name it's available on `context.bindings`
+      authLevel: anonymous #<enum - anonymous|function (default)|admin>
+
+packaging:
+  - node_modules
+#  - other_dir
+#  - other_file

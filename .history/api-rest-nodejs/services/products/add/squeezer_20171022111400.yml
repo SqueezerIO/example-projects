@@ -1,0 +1,59 @@
+# SQUEEZER MICROSERVICE
+
+description: Hello Function
+
+event:
+  type: http
+  path: /rest/v1/hello/{name}*
+  methods:
+    - GET
+    - POST
+ 
+packaging:
+  - vars.json
+
+swagger:
+  paths:
+  /rest/v1/products:
+    post:
+      summary: Add a product
+      description: Add a product as a JSON object
+      tags:
+        - Products
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Product object that needs to be added to the store
+          required: true
+          schema:
+            $ref: '#/definitions/ProductV1'
+      responses:
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/GetResponse'
+        400:
+          description: bad request
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        500:
+          description: internal error       
+  definitions:
+    RestV1HelloNameResponse:
+      type: object
+      properties:
+        name:
+          type: string
+        number:
+          type: string
+        message:
+          type: string
+    HelloMessage:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string

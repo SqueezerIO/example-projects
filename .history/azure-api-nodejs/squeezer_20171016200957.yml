@@ -1,0 +1,63 @@
+# PROJECT
+name: azure-api-nodejs
+key: b543f1563579628b908662dd410002fa85b38630f569c956b8e0e0c8b20c1aa8fd876207ecf8ddabbb97
+
+# LANGUAGE PLATFORM
+runtime:
+  name: nodejs
+  # version: "6.5.0"
+
+# GLOBAL ENVIRONMENT VARIABLES
+# accessible as shell "ENV" variables or in the YAML templates as "vars.env"
+env:
+  SQZ_PROJECT_NAME        : ${this.name}
+  SQZ_STAGE               : ${vars.stage}
+
+  # CORS enabled by default https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
+  CORS: 'enabled'
+
+#  stage env vars
+#  dev:
+#    GLOBAL_VAR1: hello dev 1
+#    GLOBAL_VAR2: hello dev 2
+#  prod:
+#    GLOBAL_VAR3: hello prod 1
+
+checksums:
+  ignore:
+    - node_m
+
+plugins:
+  - name: squeezer-serve
+    path: node_modules
+  - name: squeezer-azure
+    path: node_modules
+  - name: squeezer-swagger
+    path: node_modules
+
+swagger:
+  info:
+    title: My API Docs
+    description: detailed docs for my API endpoints
+  definitions:
+    GetResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          default: success
+        statusCode:
+          type: integer
+          default: 200
+    ErrorResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          default: error message
+        code:
+          type: string
+          default: error code
+        statusCode:
+          type: integer
+          default: 400

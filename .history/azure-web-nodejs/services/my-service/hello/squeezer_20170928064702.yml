@@ -1,0 +1,11 @@
+description: Hello Function
+
+events:
+  - type: http
+    path: /
+    method: get
+
+packaging:
+  - node_modules
+#  - other_dir
+#  - other_file

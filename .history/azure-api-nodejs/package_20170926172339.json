@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "test": "mocha ./test/runner.js",
+    "eslint": "eslint .",
+    "jsinspect": "jsinspect -t 30 -i ./lib/ ./microservices/"
+  },
+  "dependencies": {
+    "azure-storage": "^2.4.0",
+    "squeezer-azure": "~0.0.1",
+    "squeezer-serve": "~0.0.1",
+    "squeezer-swagger": "~0.0.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "eslint": "^3.14.0",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
+    "jsinspect": "^0.12.4",
+    "json-loader": "^0.5.4",
+    "webpack": "^3.6.0"
+  }
+}

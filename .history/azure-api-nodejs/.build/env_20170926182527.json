@@ -1,0 +1,10 @@
+{
+  "APPINSIGHTS_INSTRUMENTATIONKEY": "a68b77c4-ec43-42ec-aafe-0178966f4a40",
+  "AzureWebJobsDashboard": "DefaultEndpointsProtocol=https;AccountName=brj45ak5orbq4azfunctions;AccountKey=rOpfpYa2ys2CtR63YxRl/KJYe5fGtaEZKZND59q1d/EgSzCDiuzl7GcUeg8wH8dLuRFPbTN7l+PNPTWSBLX0bA==",
+  "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=brj45ak5orbq4azfunctions;AccountKey=rOpfpYa2ys2CtR63YxRl/KJYe5fGtaEZKZND59q1d/EgSzCDiuzl7GcUeg8wH8dLuRFPbTN7l+PNPTWSBLX0bA==",
+  "FUNCTIONS_EXTENSION_VERSION": "~1",
+  "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "DefaultEndpointsProtocol=https;AccountName=brj45ak5orbq4azfunctions;AccountKey=rOpfpYa2ys2CtR63YxRl/KJYe5fGtaEZKZND59q1d/EgSzCDiuzl7GcUeg8wH8dLuRFPbTN7l+PNPTWSBLX0bA==",
+  "WEBSITE_CONTENTSHARE": "azureapinodejs-dev-westeurope-1ce0fc40",
+  "WEBSITE_NODE_DEFAULT_VERSION": "6.5.0",
+  "STORAGE_ACCOUNT_NAME": "brj45ak5orbq4azfunctions"
+}

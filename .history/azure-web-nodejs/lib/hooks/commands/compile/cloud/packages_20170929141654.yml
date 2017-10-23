@@ -1,0 +1,9 @@
+- description: Adding dependencies
+  bin: cd ${project.path} && ${project.path}/node_modules/.bin/yarn
+  args:
+    - 'add'
+    - '${packages}'
+    - '--prefer-offline'
+    - '--non-interactive'
+    - '--no-progress'
+    - '--silent'

@@ -1,0 +1,29 @@
+runtime: nodejs
+
+vars:
+  stages:
+    local:
+      mongodb: 
+        uri: mongodb://localhost/myapp
+        options:
+          autoReconnect: true
+      response-http-headers:
+        - Access-Control-Allow-Origin: "*"
+        - Access-Control-Allow-Headers: "Authorization, Content-Type"
+    dev:
+      mongodb:
+        uri: mongodb://username:password@host:port/myapp
+      response-http-headers:
+        - Access-Control-Allow-Origin: "*"
+        - Access-Control-Allow-Headers: "Authorization, Content-Type"
+    prod:
+      mongodb: 
+        uri: mongodb://username:password@host:port/myapp
+      response-http-headers:
+        - Access-Control-Allow-Origin: "http://example.org"
+
+plugins:
+  - squeezer-serve
+  - squeezer-swagger
+
+swagger: !!inc/file "swagger.yml"

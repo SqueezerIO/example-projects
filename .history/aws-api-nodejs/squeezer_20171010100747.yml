@@ -1,0 +1,59 @@
+# PROJECT
+name: aws-api-nodejs
+key: null
+
+# LANGUAGE PLATFORM
+runtime:
+  name: nodejs
+  version: '6.10'
+
+# accessible via "vars.json" file on every function
+stage:
+  project        : ${this.name}
+
+  # CORS enabled by default https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
+  cors: 'enabled'
+
+#  stage vars
+#  local: 
+#    var: hello local    
+#  dev:
+#    var: hello dev
+#  prod:
+#    var: hello prod
+
+# PLUGINS
+plugins:
+  - name: squeezer-serve
+    path: node_modules
+  - name: squeezer-aws
+    path: node_modules
+  - name: squeezer-swagger
+    path: node_modules
+
+swagger:
+  info:
+    title: My API Docs
+    description: detailed docs for my API endpoints
+  definitions:
+    GetResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          default: success
+        statusCode:
+          type: integer
+          default: 200
+    ErrorResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          default: error message
+        code:
+          type: string
+          default: error code
+        statusCode:
+          type: integer
+          default: 400

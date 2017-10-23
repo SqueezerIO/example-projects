@@ -1,0 +1,15 @@
+# SQUEEZER MICROSERVICE
+
+description: Hello Function
+
+event:
+  type: http
+  path: /rest/v1/hello/{name}*
+  methods:
+    - GET
+    - POST
+ 
+packaging:
+  - vars.json
+
+swagger: !!inc/file "swagger.yml"

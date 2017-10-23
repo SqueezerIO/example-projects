@@ -1,0 +1,49 @@
+runtime: "nodejs"
+
+vars:
+  project: ${this.name}
+
+  stages:
+    local:
+      response-http-headers:
+        - Access-Control-Allow-Origin: "*"
+        - Access-Control-Allow-Headers: "Authorization, Content-Type"
+    dev:
+      response-http-headers:
+        - Access-Control-Allow-Origin: "*"
+        - Access-Control-Allow-Headers: "Authorization, Content-Type"
+    prod:
+      response-http-headers:
+        - Access-Control-Allow-Origin: "http://example.org"
+
+
+plugins:
+  - squeezer-serve
+  - squeezer-swagger
+
+swagger:
+  info:
+    title: API Documentation
+    description: Detailed documentation for available API endpoints
+  definitions:
+    GetResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          default: success
+        statusCode:
+          type: integer
+          default: 200
+    ErrorResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          default: error message
+        code:
+          type: string
+          default: error code
+        statusCode:
+          type: integer
+          default: 400

@@ -1,0 +1,28 @@
+description: Hello Function
+
+events:
+  - type: http
+    path: /
+    method: get
+    x-azure-settings:
+      name: req #<string>, default - "req", specifies which name it's available on `context.bindings`
+      authLevel: anonymous #<enum - anonymous|function (default)|admin>
+
+# INCLUDES FILES OR DIRECTORIES FROM PROJECT ( should appear on "src/inclusions/DEST" microservice's path )
+inclusions:
+  - src: lib/http
+    dest: http
+  - src: web/templates
+    dest: templates
+  - src: node/templates
+    dest: templates
+
+packaging:
+  - node_modules
+  - inclusions/http
+  - inclusions/templates
+#  - other_dir
+#  - other_file
+
+tests:
+  - web.js
