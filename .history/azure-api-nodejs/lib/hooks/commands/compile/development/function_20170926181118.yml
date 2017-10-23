@@ -1,7 +1,0 @@
-- description: Webpacking handler source
-  bin: ${project.path}/node_modules/.bin/webpack
-  args:
-    - '--config'
-    - '${project.path}/webpack.dev.js'
-    - '${source}/handler.js'
-    - '${output}/handler.js'

@@ -1,2 +1,0 @@
-- description: Linking function's source directory to the target dir
-  bin: sqz fileutils:link --source ${source} --target ${output}
