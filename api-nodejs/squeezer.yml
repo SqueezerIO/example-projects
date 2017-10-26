@@ -1,3 +1,5 @@
+name: api-nodejs
+
 runtime: nodejs
 
 vars:
