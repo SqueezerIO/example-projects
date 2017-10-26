@@ -1,5 +1,3 @@
-name: api-rest-nodejs
-
 runtime: nodejs
 
 vars:
